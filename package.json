@@ -7,5 +7,8 @@
     "heroku-prebuild": "cd frontend && npm install && npm run build && mv build ../backend",
     "start": "cd backend && npm install && node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
-}
+},"engine": {
+    "node": "16.17.1",
+    "npm": "8.19.2"
+  }
 }
