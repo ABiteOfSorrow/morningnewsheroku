@@ -24,10 +24,10 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(`build`));
+app.use(express.static('build'));
 
 app.get("*", function (req, res) {
-    res.sendFile(__dirname + "./build/index.js");
+    res.sendFile(path.resolve(__dirname + "build", "index.html"));
   });
   
   app.listen(PORT, () => {

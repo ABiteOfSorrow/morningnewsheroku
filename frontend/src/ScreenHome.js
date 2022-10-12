@@ -43,7 +43,9 @@ function ScreenHome(props) {
             body: `signUpUsername=${signUpUsername}&signUpEmail=${signUpEmail}&signUpPassword=${signUpPassword}`,
         });
 
-        const userData = await data.json();
+        const json = await data.json();
+        const userData = json
+        console.log(userData)
 
         if (userData.result === true) {
             console.log("Enregistrement OK")
@@ -64,8 +66,9 @@ function ScreenHome(props) {
             body: `signInEmail=${signInEmail}&signInPassword=${signInPassword}`,
         });
 
-        const userData = await data.json();
-
+        const json = await data.json();
+        const userData = json
+        console.log(userData)
         if (userData.result === true) {
             console.log("Connexion Réussie")
             // console.log(userData)
